@@ -20,6 +20,14 @@ signupForm.addEventListener('submit', async (e) => {
     const modal = bootstrap.Modal.getInstance(signupModal)
     modal.hide()
   } catch (error) {
-    console.log(error)
+    if (error.code === 'auth/email-already-in-use') {
+      alert('Email already in use')
+    } else if(error.code === 'auth/invalid-email') {
+      alert('Please enter a valid email address')
+    } else if(error.code === 'auth/weak-password') {
+      alert('Please enter a valid password')
+    } else if (error.code) {
+      alert('Something went wrong')
+    }
   }
 })
