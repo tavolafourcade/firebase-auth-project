@@ -6,6 +6,7 @@ import './app/signinForm.js'
 import './app/logout.js'
 import './app/googleLogin.js'
 import './app/fbLogin.js'
+import './app/githubLogin.js'
 
 onAuthStateChanged(auth, async (user) => {
 if(user){
