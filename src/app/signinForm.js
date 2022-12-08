@@ -14,8 +14,8 @@ signInForm.addEventListener('submit', async (e) => {
     console.log('credentials',credentials)
 
     // Close the signin modal
-    const signupModal = document.querySelector('#signinModal')
-    const modal = bootstrap.Modal.getInstance(signupModal)
+    const signinModal = document.querySelector('#signinModal')
+    const modal = bootstrap.Modal.getInstance(signinModal)
     modal.hide()
 
     showMessage(`You have successfully signed in ${credentials.user.email}`)
